@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vinicius/Desktop/ex1e/headers/Objetos.h
+GL/glut.h
+-
+cmath
+-
+stdlib.h
+-
+
+/home/vinicius/Desktop/ex1e/srcs/Objetos.cpp
+iostream
+-
+stdlib.h
+-
+../headers/Objetos.h
+/home/vinicius/Desktop/ex1e/headers/Objetos.h
+
+/home/vinicius/Desktop/ex1e/srcs/main.cpp
+../headers/Objetos.h
+/home/vinicius/Desktop/ex1e/headers/Objetos.h
+iostream
+-
+fstream
+-
+string
+-
+

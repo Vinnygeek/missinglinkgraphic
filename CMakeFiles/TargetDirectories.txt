@@ -1,0 +1,3 @@
+/home/vinicius/Desktop/ex1e/CMakeFiles/rebuild_cache.dir
+/home/vinicius/Desktop/ex1e/CMakeFiles/play.dir
+/home/vinicius/Desktop/ex1e/CMakeFiles/edit_cache.dir
