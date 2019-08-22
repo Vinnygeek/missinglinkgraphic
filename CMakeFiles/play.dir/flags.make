@@ -6,5 +6,5 @@ CXX_FLAGS = -lglut -lGL -lGLU -lm
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/vinicius/Desktop/ex1e/headers 
+CXX_INCLUDES = -I/home/vinicius/git_workspace/missinglinkgraphic/headers 
 

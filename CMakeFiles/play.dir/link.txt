@@ -1,1 +1,1 @@
-/usr/bin/c++  -lglut -lGL -lGLU -lm   CMakeFiles/play.dir/srcs/Objetos.cpp.o CMakeFiles/play.dir/srcs/main.cpp.o  -o play /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/libglut.so 
+/usr/bin/c++  -lglut -lGL -lGLU -lm   CMakeFiles/play.dir/srcs/Objetos.cpp.o CMakeFiles/play.dir/srcs/main.cpp.o CMakeFiles/play.dir/srcs/tinyxml2.cpp.o CMakeFiles/play.dir/srcs/xmlParser.cpp.o  -o play /usr/lib/x86_64-linux-gnu/libGL.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/libglut.so 

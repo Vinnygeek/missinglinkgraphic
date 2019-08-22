@@ -5,5 +5,14 @@ CMakeFiles/play.dir/srcs/Objetos.cpp.o: headers/Objetos.h
 CMakeFiles/play.dir/srcs/Objetos.cpp.o: srcs/Objetos.cpp
 
 CMakeFiles/play.dir/srcs/main.cpp.o: headers/Objetos.h
+CMakeFiles/play.dir/srcs/main.cpp.o: headers/tinyxml2.h
+CMakeFiles/play.dir/srcs/main.cpp.o: headers/xmlParser.h
 CMakeFiles/play.dir/srcs/main.cpp.o: srcs/main.cpp
+
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o: srcs/tinyxml2.cpp
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o: headers/tinyxml2.h
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o: headers/tinyxml2.h
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o: headers/xmlParser.h
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o: srcs/xmlParser.cpp
 

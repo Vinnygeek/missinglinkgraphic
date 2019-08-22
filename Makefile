@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vinicius/Desktop/ex1e
+CMAKE_SOURCE_DIR = /home/vinicius/git_workspace/missinglinkgraphic
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vinicius/Desktop/ex1e
+CMAKE_BINARY_DIR = /home/vinicius/git_workspace/missinglinkgraphic
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/Desktop/ex1e/CMakeFiles /home/vinicius/Desktop/ex1e/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/Desktop/ex1e/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,60 @@ srcs/main.cpp.s:
 	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/main.cpp.s
 .PHONY : srcs/main.cpp.s
 
+srcs/tinyxml2.o: srcs/tinyxml2.cpp.o
+
+.PHONY : srcs/tinyxml2.o
+
+# target to build an object file
+srcs/tinyxml2.cpp.o:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/tinyxml2.cpp.o
+.PHONY : srcs/tinyxml2.cpp.o
+
+srcs/tinyxml2.i: srcs/tinyxml2.cpp.i
+
+.PHONY : srcs/tinyxml2.i
+
+# target to preprocess a source file
+srcs/tinyxml2.cpp.i:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/tinyxml2.cpp.i
+.PHONY : srcs/tinyxml2.cpp.i
+
+srcs/tinyxml2.s: srcs/tinyxml2.cpp.s
+
+.PHONY : srcs/tinyxml2.s
+
+# target to generate assembly for a file
+srcs/tinyxml2.cpp.s:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/tinyxml2.cpp.s
+.PHONY : srcs/tinyxml2.cpp.s
+
+srcs/xmlParser.o: srcs/xmlParser.cpp.o
+
+.PHONY : srcs/xmlParser.o
+
+# target to build an object file
+srcs/xmlParser.cpp.o:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/xmlParser.cpp.o
+.PHONY : srcs/xmlParser.cpp.o
+
+srcs/xmlParser.i: srcs/xmlParser.cpp.i
+
+.PHONY : srcs/xmlParser.i
+
+# target to preprocess a source file
+srcs/xmlParser.cpp.i:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/xmlParser.cpp.i
+.PHONY : srcs/xmlParser.cpp.i
+
+srcs/xmlParser.s: srcs/xmlParser.cpp.s
+
+.PHONY : srcs/xmlParser.s
+
+# target to generate assembly for a file
+srcs/xmlParser.cpp.s:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/xmlParser.cpp.s
+.PHONY : srcs/xmlParser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +246,12 @@ help:
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
+	@echo "... srcs/tinyxml2.o"
+	@echo "... srcs/tinyxml2.i"
+	@echo "... srcs/tinyxml2.s"
+	@echo "... srcs/xmlParser.o"
+	@echo "... srcs/xmlParser.i"
+	@echo "... srcs/xmlParser.s"
 .PHONY : help
 
 

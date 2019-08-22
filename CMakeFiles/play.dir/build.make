@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vinicius/Desktop/ex1e
+CMAKE_SOURCE_DIR = /home/vinicius/git_workspace/missinglinkgraphic
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vinicius/Desktop/ex1e
+CMAKE_BINARY_DIR = /home/vinicius/git_workspace/missinglinkgraphic
 
 # Include any dependencies generated for this target.
 include CMakeFiles/play.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/play.dir/flags.make
 
 CMakeFiles/play.dir/srcs/Objetos.cpp.o: CMakeFiles/play.dir/flags.make
 CMakeFiles/play.dir/srcs/Objetos.cpp.o: srcs/Objetos.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinicius/Desktop/ex1e/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/play.dir/srcs/Objetos.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/play.dir/srcs/Objetos.cpp.o -c /home/vinicius/Desktop/ex1e/srcs/Objetos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/play.dir/srcs/Objetos.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/play.dir/srcs/Objetos.cpp.o -c /home/vinicius/git_workspace/missinglinkgraphic/srcs/Objetos.cpp
 
 CMakeFiles/play.dir/srcs/Objetos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/play.dir/srcs/Objetos.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinicius/Desktop/ex1e/srcs/Objetos.cpp > CMakeFiles/play.dir/srcs/Objetos.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinicius/git_workspace/missinglinkgraphic/srcs/Objetos.cpp > CMakeFiles/play.dir/srcs/Objetos.cpp.i
 
 CMakeFiles/play.dir/srcs/Objetos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/play.dir/srcs/Objetos.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinicius/Desktop/ex1e/srcs/Objetos.cpp -o CMakeFiles/play.dir/srcs/Objetos.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinicius/git_workspace/missinglinkgraphic/srcs/Objetos.cpp -o CMakeFiles/play.dir/srcs/Objetos.cpp.s
 
 CMakeFiles/play.dir/srcs/Objetos.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/play.dir/srcs/Objetos.cpp.o.provides.build: CMakeFiles/play.dir/srcs/
 
 CMakeFiles/play.dir/srcs/main.cpp.o: CMakeFiles/play.dir/flags.make
 CMakeFiles/play.dir/srcs/main.cpp.o: srcs/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinicius/Desktop/ex1e/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/play.dir/srcs/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/play.dir/srcs/main.cpp.o -c /home/vinicius/Desktop/ex1e/srcs/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/play.dir/srcs/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/play.dir/srcs/main.cpp.o -c /home/vinicius/git_workspace/missinglinkgraphic/srcs/main.cpp
 
 CMakeFiles/play.dir/srcs/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/play.dir/srcs/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinicius/Desktop/ex1e/srcs/main.cpp > CMakeFiles/play.dir/srcs/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinicius/git_workspace/missinglinkgraphic/srcs/main.cpp > CMakeFiles/play.dir/srcs/main.cpp.i
 
 CMakeFiles/play.dir/srcs/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/play.dir/srcs/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinicius/Desktop/ex1e/srcs/main.cpp -o CMakeFiles/play.dir/srcs/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinicius/git_workspace/missinglinkgraphic/srcs/main.cpp -o CMakeFiles/play.dir/srcs/main.cpp.s
 
 CMakeFiles/play.dir/srcs/main.cpp.o.requires:
 
@@ -105,22 +105,74 @@ CMakeFiles/play.dir/srcs/main.cpp.o.provides: CMakeFiles/play.dir/srcs/main.cpp.
 CMakeFiles/play.dir/srcs/main.cpp.o.provides.build: CMakeFiles/play.dir/srcs/main.cpp.o
 
 
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o: CMakeFiles/play.dir/flags.make
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o: srcs/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/play.dir/srcs/tinyxml2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/play.dir/srcs/tinyxml2.cpp.o -c /home/vinicius/git_workspace/missinglinkgraphic/srcs/tinyxml2.cpp
+
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/play.dir/srcs/tinyxml2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinicius/git_workspace/missinglinkgraphic/srcs/tinyxml2.cpp > CMakeFiles/play.dir/srcs/tinyxml2.cpp.i
+
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/play.dir/srcs/tinyxml2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinicius/git_workspace/missinglinkgraphic/srcs/tinyxml2.cpp -o CMakeFiles/play.dir/srcs/tinyxml2.cpp.s
+
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.requires:
+
+.PHONY : CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.requires
+
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.provides: CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.requires
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.provides.build
+.PHONY : CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.provides
+
+CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.provides.build: CMakeFiles/play.dir/srcs/tinyxml2.cpp.o
+
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o: CMakeFiles/play.dir/flags.make
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o: srcs/xmlParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/play.dir/srcs/xmlParser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/play.dir/srcs/xmlParser.cpp.o -c /home/vinicius/git_workspace/missinglinkgraphic/srcs/xmlParser.cpp
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/play.dir/srcs/xmlParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vinicius/git_workspace/missinglinkgraphic/srcs/xmlParser.cpp > CMakeFiles/play.dir/srcs/xmlParser.cpp.i
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/play.dir/srcs/xmlParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vinicius/git_workspace/missinglinkgraphic/srcs/xmlParser.cpp -o CMakeFiles/play.dir/srcs/xmlParser.cpp.s
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o.requires:
+
+.PHONY : CMakeFiles/play.dir/srcs/xmlParser.cpp.o.requires
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o.provides: CMakeFiles/play.dir/srcs/xmlParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/xmlParser.cpp.o.provides.build
+.PHONY : CMakeFiles/play.dir/srcs/xmlParser.cpp.o.provides
+
+CMakeFiles/play.dir/srcs/xmlParser.cpp.o.provides.build: CMakeFiles/play.dir/srcs/xmlParser.cpp.o
+
+
 # Object files for target play
 play_OBJECTS = \
 "CMakeFiles/play.dir/srcs/Objetos.cpp.o" \
-"CMakeFiles/play.dir/srcs/main.cpp.o"
+"CMakeFiles/play.dir/srcs/main.cpp.o" \
+"CMakeFiles/play.dir/srcs/tinyxml2.cpp.o" \
+"CMakeFiles/play.dir/srcs/xmlParser.cpp.o"
 
 # External object files for target play
 play_EXTERNAL_OBJECTS =
 
 play: CMakeFiles/play.dir/srcs/Objetos.cpp.o
 play: CMakeFiles/play.dir/srcs/main.cpp.o
+play: CMakeFiles/play.dir/srcs/tinyxml2.cpp.o
+play: CMakeFiles/play.dir/srcs/xmlParser.cpp.o
 play: CMakeFiles/play.dir/build.make
 play: /usr/lib/x86_64-linux-gnu/libGL.so
 play: /usr/lib/x86_64-linux-gnu/libGLU.so
 play: /usr/lib/x86_64-linux-gnu/libglut.so
 play: CMakeFiles/play.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vinicius/Desktop/ex1e/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable play"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable play"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/play.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,6 +182,8 @@ CMakeFiles/play.dir/build: play
 
 CMakeFiles/play.dir/requires: CMakeFiles/play.dir/srcs/Objetos.cpp.o.requires
 CMakeFiles/play.dir/requires: CMakeFiles/play.dir/srcs/main.cpp.o.requires
+CMakeFiles/play.dir/requires: CMakeFiles/play.dir/srcs/tinyxml2.cpp.o.requires
+CMakeFiles/play.dir/requires: CMakeFiles/play.dir/srcs/xmlParser.cpp.o.requires
 
 .PHONY : CMakeFiles/play.dir/requires
 
@@ -138,6 +192,6 @@ CMakeFiles/play.dir/clean:
 .PHONY : CMakeFiles/play.dir/clean
 
 CMakeFiles/play.dir/depend:
-	cd /home/vinicius/Desktop/ex1e && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vinicius/Desktop/ex1e /home/vinicius/Desktop/ex1e /home/vinicius/Desktop/ex1e /home/vinicius/Desktop/ex1e /home/vinicius/Desktop/ex1e/CMakeFiles/play.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/vinicius/git_workspace/missinglinkgraphic && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vinicius/git_workspace/missinglinkgraphic /home/vinicius/git_workspace/missinglinkgraphic /home/vinicius/git_workspace/missinglinkgraphic /home/vinicius/git_workspace/missinglinkgraphic /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles/play.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/play.dir/depend
 
