@@ -6,15 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/vinicius/git_workspace/missinglinkgraphic/headers/Objetos.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/Objects.h
 GL/glut.h
 -
 cmath
 -
 stdlib.h
 -
+string
+-
 
-/home/vinicius/git_workspace/missinglinkgraphic/headers/tinyxml2.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/Screen.hpp
+../headers/Objects.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/Objects.h
+../headers/xmlParser.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/xmlParser.h
+vector
+-
+iostream
+-
+
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/tinyxml2.h
 ctype.h
 -
 limits.h
@@ -44,31 +56,35 @@ android/log.h
 assert.h
 -
 
-/home/vinicius/git_workspace/missinglinkgraphic/headers/xmlParser.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/xmlParser.h
 iostream
 -
 vector
 -
 ../headers/tinyxml2.h
-/home/vinicius/git_workspace/missinglinkgraphic/headers/tinyxml2.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/tinyxml2.h
 
-/home/vinicius/git_workspace/missinglinkgraphic/srcs/Objetos.cpp
+/home/vinicius/Desktop/semFrescura2/ex1e/srcs/Objects.cpp
 iostream
 -
-stdlib.h
+../headers/Objects.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/Objects.h
+
+/home/vinicius/Desktop/semFrescura2/ex1e/srcs/Screen.cpp
+GL/glut.h
 -
-../headers/Objetos.h
-/home/vinicius/git_workspace/missinglinkgraphic/headers/Objetos.h
+../headers/Screen.hpp
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/Screen.hpp
+iostream
+-
 
-/home/vinicius/git_workspace/missinglinkgraphic/srcs/main.cpp
-../headers/xmlParser.h
-/home/vinicius/git_workspace/missinglinkgraphic/headers/xmlParser.h
-../headers/Objetos.h
-/home/vinicius/git_workspace/missinglinkgraphic/headers/Objetos.h
+/home/vinicius/Desktop/semFrescura2/ex1e/srcs/main.cpp
+../headers/Screen.hpp
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/Screen.hpp
 
-/home/vinicius/git_workspace/missinglinkgraphic/srcs/tinyxml2.cpp
+/home/vinicius/Desktop/semFrescura2/ex1e/srcs/tinyxml2.cpp
 tinyxml2.h
-/home/vinicius/git_workspace/missinglinkgraphic/srcs/tinyxml2.h
+/home/vinicius/Desktop/semFrescura2/ex1e/srcs/tinyxml2.h
 new
 -
 stddef.h
@@ -80,9 +96,9 @@ cstddef
 cstdarg
 -
 
-/home/vinicius/git_workspace/missinglinkgraphic/srcs/xmlParser.cpp
+/home/vinicius/Desktop/semFrescura2/ex1e/srcs/xmlParser.cpp
 ../headers/xmlParser.h
-/home/vinicius/git_workspace/missinglinkgraphic/headers/xmlParser.h
+/home/vinicius/Desktop/semFrescura2/ex1e/headers/xmlParser.h
 
 headers/tinyxml2.h
 ctype.h

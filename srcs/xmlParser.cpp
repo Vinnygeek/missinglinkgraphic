@@ -101,9 +101,7 @@ string XmlReader::getNodeValue(string nodeName, string nodeAttrName){
     szAttributeText = myElement->Attribute(nodeAttrName.c_str());
     if (szAttributeText == nullptr) 
         return "Error";
-    string strOutMonth = szAttributeText;
-    cout<<nodeName<<strOutMonth<<endl;
-    return strOutMonth;
+    return szAttributeText;
 }
 
 XmlWriter::XmlWriter(string fileName,string NoRaiz){

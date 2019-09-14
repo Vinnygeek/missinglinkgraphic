@@ -1,4 +1,4 @@
-# Install script for directory: /home/vinicius/git_workspace/missinglinkgraphic
+# Install script for directory: /home/vinicius/Desktop/semFrescura2/ex1e
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vinicius/git_workspace/missinglinkgraphic/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/vinicius/Desktop/semFrescura2/ex1e/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

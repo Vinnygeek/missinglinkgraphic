@@ -1,52 +1,18 @@
-#include"../headers/xmlParser.h"
-#include"../headers/Objetos.h"
+#include"../headers/Screen.hpp"
 
-void testingXmlWriter(){
-    Node primeiro("row1");
-    Attributes attributo1("col1","green");
-    Attributes attributo2("col2","red");
-    Attributes attributo3("col3","blue");
-    Attributes attributo4("col4","black");
-    primeiro.addAttr(attributo1); primeiro.addAttr(attributo2);
-    primeiro.addAttr(attributo3); primeiro.addAttr(attributo4);
+Screen* Screen_ptr;
 
-    Node segundo("row2");
-    Attributes attributo5("col1","mag");
-    Attributes attributo6("col2","purp");
-    Attributes attributo7("col3","ice");
-    Attributes attributo8("col4","ric");
-    segundo.addAttr(attributo5); segundo.addAttr(attributo6);
-    segundo.addAttr(attributo7); segundo.addAttr(attributo8);
-
-    Node terceiro("row3");
-    Attributes attributo9("col1","kil");
-    Attributes attributo10("col2","bgf");
-    Attributes attributo11("col3","wer");
-    Attributes attributo12("col4","qwe");
-    terceiro.addAttr(attributo9); terceiro.addAttr(attributo10);
-    terceiro.addAttr(attributo11); terceiro.addAttr(attributo12);
-
-    XmlWriter myWriter("data/xmlfiles/estadoatual.xml","estado_atual");
-    myWriter.addNode(primeiro);
-    myWriter.addNode(segundo);
-    myWriter.addNode(terceiro);
-    myWriter.writeTotheFile();
-
-}
-
-void testingXmlReader(){
-    XmlReader myReader("data/xmlfiles/estadosolucao.xml","estado_solucao");
-    myReader.loadFile();
-    myReader.loadNode("row1");
-    string nodeValue = myReader.getNodeValue("row1","col1");
-    string qtdNodes = myReader.getNodeValue("info","qtd");
-}
-
-using namespace std;
+    void renderer(){Screen_ptr->renderer();}
+    void changeSize(int w, int h){Screen_ptr->changeSize(w,h);}
+    void directionalKeysHandeler(int key, int x, int y){Screen_ptr->directionalKeysHandeler(key, x, y);}
+    void Timer(int value){Screen_ptr->Timer(value, &Timer);}
+    void MouseHandle(int button, int state, int x, int y){Screen_ptr->mouseHandle(button,state,x,y);}
+    void MyKeyboardFunc(unsigned char Key, int x, int y){Screen_ptr->keyboardHandle(Key, x, y);}
+    void motion(int x, int y){Screen_ptr->motion(x,y);}
 
     int main(int argc, char **argv){
-        testingXmlWriter();
-        testingXmlReader();
+        Screen myScreen;
+        Screen_ptr = &myScreen;
         glutInit(&argc, argv);
         glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
         glutInitWindowPosition(100,100);
@@ -56,6 +22,9 @@ using namespace std;
         glutDisplayFunc(renderer);
         glutReshapeFunc(changeSize);
         glutIdleFunc(renderer);
+        glutMouseFunc(MouseHandle);
+        glutMotionFunc(motion);
+        glutKeyboardFunc(MyKeyboardFunc);
         glutSpecialFunc(directionalKeysHandeler);
         glutTimerFunc(1, Timer, 1);
         glEnable(GL_DEPTH_TEST);

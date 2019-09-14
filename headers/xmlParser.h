@@ -5,6 +5,9 @@
 using namespace std;
 using namespace tinyxml2;
 
+#ifndef __XMLPARSER_H__
+#define __XMLPARSER_H__
+
 class Attributes{
     public:
         Attributes(string Attrname, string AttrValue);
@@ -61,3 +64,5 @@ class XmlWriter: public XmlParser{
     private:
         vector<Node> nodeList;
 };
+
+#endif

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vinicius/git_workspace/missinglinkgraphic
+CMAKE_SOURCE_DIR = /home/vinicius/Desktop/semFrescura2/ex1e
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vinicius/git_workspace/missinglinkgraphic
+CMAKE_BINARY_DIR = /home/vinicius/Desktop/semFrescura2/ex1e
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/Desktop/semFrescura2/ex1e/CMakeFiles /home/vinicius/Desktop/semFrescura2/ex1e/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/git_workspace/missinglinkgraphic/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vinicius/Desktop/semFrescura2/ex1e/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,32 +123,59 @@ play/fast:
 	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/build
 .PHONY : play/fast
 
-srcs/Objetos.o: srcs/Objetos.cpp.o
+srcs/Objects.o: srcs/Objects.cpp.o
 
-.PHONY : srcs/Objetos.o
+.PHONY : srcs/Objects.o
 
 # target to build an object file
-srcs/Objetos.cpp.o:
-	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Objetos.cpp.o
-.PHONY : srcs/Objetos.cpp.o
+srcs/Objects.cpp.o:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Objects.cpp.o
+.PHONY : srcs/Objects.cpp.o
 
-srcs/Objetos.i: srcs/Objetos.cpp.i
+srcs/Objects.i: srcs/Objects.cpp.i
 
-.PHONY : srcs/Objetos.i
+.PHONY : srcs/Objects.i
 
 # target to preprocess a source file
-srcs/Objetos.cpp.i:
-	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Objetos.cpp.i
-.PHONY : srcs/Objetos.cpp.i
+srcs/Objects.cpp.i:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Objects.cpp.i
+.PHONY : srcs/Objects.cpp.i
 
-srcs/Objetos.s: srcs/Objetos.cpp.s
+srcs/Objects.s: srcs/Objects.cpp.s
 
-.PHONY : srcs/Objetos.s
+.PHONY : srcs/Objects.s
 
 # target to generate assembly for a file
-srcs/Objetos.cpp.s:
-	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Objetos.cpp.s
-.PHONY : srcs/Objetos.cpp.s
+srcs/Objects.cpp.s:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Objects.cpp.s
+.PHONY : srcs/Objects.cpp.s
+
+srcs/Screen.o: srcs/Screen.cpp.o
+
+.PHONY : srcs/Screen.o
+
+# target to build an object file
+srcs/Screen.cpp.o:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Screen.cpp.o
+.PHONY : srcs/Screen.cpp.o
+
+srcs/Screen.i: srcs/Screen.cpp.i
+
+.PHONY : srcs/Screen.i
+
+# target to preprocess a source file
+srcs/Screen.cpp.i:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Screen.cpp.i
+.PHONY : srcs/Screen.cpp.i
+
+srcs/Screen.s: srcs/Screen.cpp.s
+
+.PHONY : srcs/Screen.s
+
+# target to generate assembly for a file
+srcs/Screen.cpp.s:
+	$(MAKE) -f CMakeFiles/play.dir/build.make CMakeFiles/play.dir/srcs/Screen.cpp.s
+.PHONY : srcs/Screen.cpp.s
 
 srcs/main.o: srcs/main.cpp.o
 
@@ -240,9 +267,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... play"
 	@echo "... edit_cache"
-	@echo "... srcs/Objetos.o"
-	@echo "... srcs/Objetos.i"
-	@echo "... srcs/Objetos.s"
+	@echo "... srcs/Objects.o"
+	@echo "... srcs/Objects.i"
+	@echo "... srcs/Objects.s"
+	@echo "... srcs/Screen.o"
+	@echo "... srcs/Screen.i"
+	@echo "... srcs/Screen.s"
 	@echo "... srcs/main.o"
 	@echo "... srcs/main.i"
 	@echo "... srcs/main.s"
