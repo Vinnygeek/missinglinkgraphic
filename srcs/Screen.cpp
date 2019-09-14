@@ -14,7 +14,7 @@ Screen::Screen(){
         clock = true; halt = false;
         currentKey = '0';
         count = 0;
-        loadActualState();
+        loadInitialState();
 
         //motion function
         rotation = false;
@@ -313,8 +313,8 @@ void Screen::camReposition(){
 }
 
 
-void Screen::loadActualState(){
-    XmlReader myReader("data/xmlfiles/estadoatual.xml","estado_solucao");
+void Screen::loadInitialState(){
+    XmlReader myReader("data/xmlfiles/actual_state.xml","actual_state");
     myReader.loadFile();
     myReader.loadNode("row1");
 
@@ -411,10 +411,180 @@ void Screen::motion(int x, int y){
 }
 
 void Screen::saveActualState(){
+    vector<vector<string>>buffer = myCubeMatrix;
+    Node firstNode("row1");
+    Node secNode("row2");
+    Node trdNode("row3");
+    Node fthNode("row4");
+
+    for(int i = 0; i < 4;i++){
+        for(int j = 0; j < 4;j++){
+            if(i == 0){
+                if(buffer[i][j] == "vm")
+                    buffer[i][j] == "vms";
+                else if(buffer[i][j] == "am")
+                    buffer[i][j] == "ams";
+                else if(buffer[i][j] == "vd")
+                    buffer[i][j] == "vds";
+                else if(buffer[i][j] == "br")
+                    buffer[i][j] == "brs";
+                else if(buffer[i][j] == "pr")
+                    buffer[i][j] == "vzo";
+            }else if(i== 1){
+                if(buffer[i][j] == "vm")
+                    buffer[i][j] == "vmm1";
+                else if(buffer[i][j] == "am")
+                    buffer[i][j] == "amm1";
+                else if(buffer[i][j] == "vd")
+                    buffer[i][j] == "vdm1";
+                else if(buffer[i][j] == "br")
+                    buffer[i][j] == "brm1";
+                else if(buffer[i][j] == "pr")
+                    buffer[i][j] == "vzo";
+            }else if(i == 2){
+                if(buffer[i][j] == "vm")
+                    buffer[i][j] == "vmm2";
+                else if(buffer[i][j] == "am")
+                    buffer[i][j] == "amm2";
+                else if(buffer[i][j] == "vd")
+                    buffer[i][j] == "vdm2";
+                else if(buffer[i][j] == "br")
+                    buffer[i][j] == "brm2";
+                else if(buffer[i][j] == "pr")
+                    buffer[i][j] == "vzo";
+            
+            }else if(i== 3){
+                if(buffer[i][j] == "vm")
+                    buffer[i][j] == "vmi";
+                else if(buffer[i][j] == "am")
+                    buffer[i][j] == "ami";
+                else if(buffer[i][j] == "vd")
+                    buffer[i][j] == "vdi";
+                else if(buffer[i][j] == "br")
+                    buffer[i][j] == "bri";
+                else if(buffer[i][j] == "pr")
+                    buffer[i][j] == "vzo";
+            }
+        }
+    }
+
+    Attributes attr1("col1",buffer[0][0]);
+    Attributes attr2("col2",buffer[0][1]);
+    Attributes attr3("col3",buffer[0][2]);
+    Attributes attr4("col4",buffer[0][3]);
+
+    firstNode.addAttr(attr1); firstNode.addAttr(attr2);
+    firstNode.addAttr(attr3); firstNode.addAttr(attr4);
+
+    Attributes attr5("col1",buffer[1][0]);
+    Attributes attr6("col2",buffer[1][1]);
+    Attributes attr7("col3",buffer[1][2]);
+    Attributes attr8("col4",buffer[1][3]);
+    secNode.addAttr(attr5); secNode.addAttr(attr6);
+    secNode.addAttr(attr7); secNode.addAttr(attr8);
+
+    Attributes attr9("col1",buffer[2][0]);
+    Attributes attr10("col2",buffer[2][1]);
+    Attributes attr11("col3",buffer[2][2]);
+    Attributes attr12("col4",buffer[2][3]);
+    trdNode.addAttr(attr9); trdNode.addAttr(attr10);
+    trdNode.addAttr(attr11); trdNode.addAttr(attr12);
+
+    Attributes attr13("col1",buffer[3][0]);
+    Attributes attr14("col2",buffer[3][1]);
+    Attributes attr15("col3",buffer[3][2]);
+    Attributes attr16("col4",buffer[3][3]);
+    fthNode.addAttr(attr13); fthNode.addAttr(attr14);
+    fthNode.addAttr(attr15); fthNode.addAttr(attr16);	
+
+    XmlWriter myWriter("data/xmlfiles/actual_state.xml","actual_state");
+    myWriter.addNode(firstNode);
+    myWriter.addNode(secNode);
+    myWriter.addNode(trdNode);
+    myWriter.addNode(fthNode);
+    myWriter.writeTotheFile();
+
 
 }
 
 void Screen::loadSolution(){
-    
+    XmlReader myReader("data/xmlfiles/solution_state.xml","solution_state");
+    myReader.loadFile();
+    myReader.loadNode("row1");
+
+	myCubeMatrix[0][0] = myReader.getNodeValue("row1","col1");
+	myCubeMatrix[0][1] = myReader.getNodeValue("row1","col2");
+	myCubeMatrix[0][2] = myReader.getNodeValue("row1","col3");
+	myCubeMatrix[0][3] = myReader.getNodeValue("row1","col4");
+
+	myCubeMatrix[1][0] = myReader.getNodeValue("row2","col1");
+	myCubeMatrix[1][1] = myReader.getNodeValue("row2","col2");
+	myCubeMatrix[1][2] = myReader.getNodeValue("row2","col3");
+	myCubeMatrix[1][3] = myReader.getNodeValue("row2","col4");
+
+	myCubeMatrix[2][0] = myReader.getNodeValue("row3","col1");
+	myCubeMatrix[2][1] = myReader.getNodeValue("row3","col2");
+	myCubeMatrix[2][2] = myReader.getNodeValue("row3","col3");
+	myCubeMatrix[2][3] = myReader.getNodeValue("row3","col4");
+
+	myCubeMatrix[3][0] = myReader.getNodeValue("row4","col1");
+	myCubeMatrix[3][1] = myReader.getNodeValue("row4","col2");
+	myCubeMatrix[3][2] = myReader.getNodeValue("row4","col3");
+	myCubeMatrix[3][3] = myReader.getNodeValue("row4","col4");
+
+    //string qtdNodes = myReader.getNodeValue("info","qtd");
+    for(int i = 0; i < 4;++i){
+        for(int j = 0; j < 4; j++)
+            if(myCubeMatrix[i][j] == "vms" || myCubeMatrix[i][j] == "vmm1" || myCubeMatrix[i][j] == "vmm2" || myCubeMatrix[i][j] == "vmi")
+                myCubeMatrix[i][j] = "vm";
+            else if(myCubeMatrix[i][j] == "ams" || myCubeMatrix[i][j] == "amm1" || myCubeMatrix[i][j] == "amm2" || myCubeMatrix[i][j] == "ami")    
+                myCubeMatrix[i][j] = "am";
+            else if(myCubeMatrix[i][j] == "vds" || myCubeMatrix[i][j] == "vdm1" || myCubeMatrix[i][j] == "vdm2" || myCubeMatrix[i][j] == "vdi")
+                myCubeMatrix[i][j] = "vd";
+            else if(myCubeMatrix[i][j] == "brs" || myCubeMatrix[i][j] == "brm1" || myCubeMatrix[i][j] == "bri")
+                myCubeMatrix[i][j] = "br";
+            else if(myCubeMatrix[i][j] == "vzo")
+                myCubeMatrix[i][j] = "pr";
+    }
 }
 
+void Screen::loadActualState(){
+    XmlReader myReader("data/xmlfiles/actual_state.xml","actual_state");
+    myReader.loadFile();
+    myReader.loadNode("row1");
+
+	myCubeMatrix[0][0] = myReader.getNodeValue("row1","col1");
+	myCubeMatrix[0][1] = myReader.getNodeValue("row1","col2");
+	myCubeMatrix[0][2] = myReader.getNodeValue("row1","col3");
+	myCubeMatrix[0][3] = myReader.getNodeValue("row1","col4");
+
+	myCubeMatrix[1][0] = myReader.getNodeValue("row2","col1");
+	myCubeMatrix[1][1] = myReader.getNodeValue("row2","col2");
+	myCubeMatrix[1][2] = myReader.getNodeValue("row2","col3");
+	myCubeMatrix[1][3] = myReader.getNodeValue("row2","col4");
+
+	myCubeMatrix[2][0] = myReader.getNodeValue("row3","col1");
+	myCubeMatrix[2][1] = myReader.getNodeValue("row3","col2");
+	myCubeMatrix[2][2] = myReader.getNodeValue("row3","col3");
+	myCubeMatrix[2][3] = myReader.getNodeValue("row3","col4");
+
+	myCubeMatrix[3][0] = myReader.getNodeValue("row4","col1");
+	myCubeMatrix[3][1] = myReader.getNodeValue("row4","col2");
+	myCubeMatrix[3][2] = myReader.getNodeValue("row4","col3");
+	myCubeMatrix[3][3] = myReader.getNodeValue("row4","col4");
+
+    //string qtdNodes = myReader.getNodeValue("info","qtd");
+    for(int i = 0; i < 4;++i){
+        for(int j = 0; j < 4; j++)
+            if(myCubeMatrix[i][j] == "vms" || myCubeMatrix[i][j] == "vmm1" || myCubeMatrix[i][j] == "vmm2" || myCubeMatrix[i][j] == "vmi")
+                myCubeMatrix[i][j] = "vm";
+            else if(myCubeMatrix[i][j] == "ams" || myCubeMatrix[i][j] == "amm1" || myCubeMatrix[i][j] == "amm2" || myCubeMatrix[i][j] == "ami")    
+                myCubeMatrix[i][j] = "am";
+            else if(myCubeMatrix[i][j] == "vds" || myCubeMatrix[i][j] == "vdm1" || myCubeMatrix[i][j] == "vdm2" || myCubeMatrix[i][j] == "vdi")
+                myCubeMatrix[i][j] = "vd";
+            else if(myCubeMatrix[i][j] == "brs" || myCubeMatrix[i][j] == "brm1" || myCubeMatrix[i][j] == "bri")
+                myCubeMatrix[i][j] = "br";
+            else if(myCubeMatrix[i][j] == "vzo")
+                myCubeMatrix[i][j] = "pr";
+    }
+}

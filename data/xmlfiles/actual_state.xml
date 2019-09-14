@@ -1,0 +1,7 @@
+<actual_state>
+    <row1 col1="am" col2="vm" col3="am" col4="vd"/>
+    <row2 col1="vm" col2="vd" col3="br" col4="br"/>
+    <row3 col1="vm" col2="br" col3="vd" col4="am"/>
+    <row4 col1="vm" col2="pr" col3="am" col4="vd"/>
+    <info qtd="4"/>
+</actual_state>

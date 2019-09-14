@@ -1,7 +1,0 @@
-<estado_solucao>
-    <row1 col1="vms" col2="ams" col3="vds" col4="brs"/>
-    <row2 col1="vmm" col2="amm" col3="vdm" col4="brm"/>
-    <row3 col1="vmm" col2="amm" col3="vdm" col4="vzo"/>
-    <row4 col1="vmi" col2="ami" col3="vdi" col4="bri"/>
-    <info qtd="4"/>
-</estado_solucao>

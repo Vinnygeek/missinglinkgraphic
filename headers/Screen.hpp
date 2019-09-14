@@ -22,6 +22,7 @@ class Screen{
         void keyboardHandle(unsigned char Key, int x, int y);
         void camReposition();
 
+        void loadInitialState();
         void loadActualState();
         void loadSolution();
         void saveActualState();
