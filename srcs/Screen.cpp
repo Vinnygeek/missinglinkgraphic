@@ -15,7 +15,7 @@ Screen::Screen(){
         currentKey = '0';
         count = 0;
         loadActualState();
-        actualCol = 0;
+
         //motion function
         rotation = false;
         move = false;
@@ -28,14 +28,10 @@ Screen::Screen(){
 
 void Screen::keyboardHandle(unsigned char Key, int x, int y){
      switch(Key){
-        //case ‘z’: MenuHandler(0); 
-
-        //break;
         case 'e': //rotate top right - clockwise
             if(halt == false){
                 halt = true;
                 currentKey = 'e';
-                cout<<"rotatingright"<<endl;
             }
         break;
 
@@ -43,7 +39,6 @@ void Screen::keyboardHandle(unsigned char Key, int x, int y){
             if(halt == false){
                 halt = true;
                 currentKey = 'q';
-                cout<<"rotatingleft"<<endl;
             }
         break;
 
@@ -51,7 +46,6 @@ void Screen::keyboardHandle(unsigned char Key, int x, int y){
                 if(halt == false){
                 halt = true;
                 currentKey = 'd';
-                cout<<"rotatingbottomright"<<endl;
             }
         break;
 
@@ -59,23 +53,20 @@ void Screen::keyboardHandle(unsigned char Key, int x, int y){
                 if(halt == false){
                 halt = true;
                 currentKey = 'a';
-                cout<<"rotatingbottomleft"<<endl;
             }
         break;
         
-        case 'w':
+        case 'w': //Moving the black face up
              if(halt == false){
                 halt = true;
                 currentKey = 'w';
-                cout<<"moving black face up"<<endl;
              }
         break;
         
-        case 's': 
+        case 's': //Moving the black face down
             if(halt == false){
                 halt = true;
                 currentKey = 's';
-                cout<<"moving black down"<<endl;
              }       
         break;
     }
@@ -86,37 +77,32 @@ void Screen::directionalKeysHandeler(int key, int x, int y){
      switch (key) {
         case GLUT_KEY_LEFT :
             rotateglobal += 0.209f;
-            /* 
-            if(actualPosition == 4){
-                actualPosition = 0;
-                camReposition();
-            }else{
-                actualPosition++;
-                camReposition();
-            }*/
         break;
 
         case GLUT_KEY_RIGHT :
-            rotateglobal -= 0.209f;
-           /*  if(actualPosition == 0){
-                actualPosition = 4;
-                camReposition();
-            }else{
-                actualPosition--;
-                camReposition();
-            }*/            
+            rotateglobal -= 0.209f;           
         break;
 
-        case GLUT_KEY_UP :
-            camPosx = 10.0f; camPosy = 26.0f; camPosz = 3.0f;
-            camEyex = 10.0f; camEyey = 6.0f; camEyez = 3.0f;
-            camUpx = 1.0f;  camUpy = 0.0f; camUpz = 0.0f;
+        case GLUT_KEY_F1 :
+            //Shuffle the cube
+            shuffleCube();
         break;
-        case GLUT_KEY_DOWN :
-            camPosx = 10.0f; camPosy = -14.0f; camPosz = 3.0f;
-            camEyex = 10.0f; camEyey = 6.0f; camEyez = 3.0f;
-            camUpx = 1.0f;  camUpy = 0.0f; camUpz = 0.0f;
+
+        case GLUT_KEY_F2 :
+           //Load the actual config
+           loadActualState();
         break;
+
+        case GLUT_KEY_F3 :
+          //Load the solution config
+          loadSolution();
+        break;
+
+        case GLUT_KEY_F4 :
+          //Save actual config
+          saveActualState();
+        break;
+
     }
 }
 
@@ -127,7 +113,7 @@ void Screen::changeSize(int w, int h){
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
-    //Configura a tela viewport para todo o quadrado da tela
+    //Change viewport
     glViewport(0, 0, w, h);
     gluPerspective(45.0f, ratio, 0.1f, 100.0f);
 }
@@ -136,16 +122,11 @@ void Screen::changeSize(int w, int h){
 void Screen::renderer(void){
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);  
-    //Criando os vetores da base
+    //Creating the 3D unit vectors
     _3D_World_Base worldBasis(0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
     worldBasis.createBasis();
     
-    //Cubo myCubo(10.0f,6.0f,3.0f,6.0f,rotateAngle + rotateglobal); //10, 6, 3
-    //myCubo.rotateYaxis();
-    //cout<<"rotacao---------------------------"<<rotateAngle<<endl;
-
-    //----------------------------------------------------------------------------------------
-        //Top Cube
+    //Top Cube
     Cubo myCubo(8.0f,11.0f,1.0f,6.0f,rotateAngle + rotateglobal,myCubeMatrix[0][0],myCubeMatrix[0][1],
     myCubeMatrix[0][2],myCubeMatrix[0][3]); //10, 6, 3
     myCubo.rotateYaxis();
@@ -379,13 +360,10 @@ void Screen::loadActualState(){
                 myCubeMatrix[i][j] = "br";
             else if(myCubeMatrix[i][j] == "vzo")
                 myCubeMatrix[i][j] = "pr";
-
-    myCubeMatrixBuffer = myCubeMatrix;
+    
+    //For Debbugging;
     showMatrice();
     }
-}
-void Screen::saveActualState(){
-
 }
 
 void Screen::pushMovement(){
@@ -397,6 +375,18 @@ void Screen::popMovement(){
 }
 
 void Screen::shuffleCube(){
+    srand(time(NULL));
+    for(int i = 0; i < 200; i++){
+        string aux;
+        int a = rand()%4;
+        int b = rand()%4;
+        int c = rand()%4;
+        int d = rand()%4;
+        aux = myCubeMatrix[a][b];
+        myCubeMatrix[a][b] = myCubeMatrix[c][d];
+        myCubeMatrix[c][d] = aux;
+
+    }
 
 }
 
@@ -419,3 +409,12 @@ void Screen::motion(int x, int y){
     prevx = x;
 
 }
+
+void Screen::saveActualState(){
+
+}
+
+void Screen::loadSolution(){
+    
+}
+

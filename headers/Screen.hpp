@@ -2,6 +2,9 @@
 #include"../headers/xmlParser.h"
 #include<vector>
 #include<iostream>
+#include<cstdlib>
+#include<time.h>
+
 using namespace std;
 
 #define POS 5
@@ -20,7 +23,7 @@ class Screen{
         void camReposition();
 
         void loadActualState();
-
+        void loadSolution();
         void saveActualState();
         void pushMovement();
         void popMovement();
@@ -51,9 +54,6 @@ class Screen{
         char currentKey;
         int pulseKeys[6] = {0,0,0,0,0,0};
         vector<vector<string>> myCubeMatrix;
-        vector<vector<string>> myCubeMatrixBuffer;
-        int actualCol;
-
         //New Function
         bool move,rotation,updown;
         int prevx,prevy;

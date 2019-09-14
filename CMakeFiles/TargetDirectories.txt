@@ -1,3 +1,0 @@
-/home/vinicius/Desktop/semFrescura2/ex1e/CMakeFiles/rebuild_cache.dir
-/home/vinicius/Desktop/semFrescura2/ex1e/CMakeFiles/play.dir
-/home/vinicius/Desktop/semFrescura2/ex1e/CMakeFiles/edit_cache.dir
