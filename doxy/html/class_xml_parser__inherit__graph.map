@@ -1,0 +1,4 @@
+<map id="XmlParser" name="XmlParser">
+<area shape="rect" id="node2" href="$class_xml_reader.html" title="Esta classe herda os atributos da classe XMLParser para a leitura de arquivos XML. " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="node3" href="$class_xml_writer.html" title="Esta classe herda os atributos da classe XmlParser, serve para escrever dados em arquivos XML..." alt="" coords="117,80,197,107"/>
+</map>

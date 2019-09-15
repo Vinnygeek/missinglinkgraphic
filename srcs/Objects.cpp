@@ -133,8 +133,6 @@ using namespace std;
         glEnd();  // End of drawing color-cube
     }
 
-    void Cubo::rotateXaxis(){}
-
     void Cubo::rotateYaxis(){
         for(int i = 0; i < 24;i++){
             float auxx = vertices[i][0]; float auxz = vertices[i][2];
@@ -145,9 +143,6 @@ using namespace std;
         }
         createCubo();         
     }
-
-    void Cubo::rotateZaxis(){}
-
 
  _3D_Camera::_3D_Camera(float xEye, float yEye, float zEye, 
     float xCenter, float yCenter, float zCenter,

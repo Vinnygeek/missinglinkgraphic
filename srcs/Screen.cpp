@@ -6,7 +6,6 @@ using namespace std;
 
 Screen::Screen(){
         rotateAngle = 0; rotateAngle2 = 0; rotateglobal = 0;
-        actualPosition = 0;
         timerFuncTest = 0;
         camPosx = 20.0f; camPosy = 20.0f; camPosz = 20.0f; 
         camEyex = 10.0f; camEyey = 6.0f; camEyez = 3.0f; 
@@ -287,32 +286,6 @@ void Screen::mouseHandle(int button, int state, int x, int y){
     glutPostRedisplay();
 }
 
-void Screen::camReposition(){
-    if(actualPosition == 0){
-        camUpx = 0.0f; camUpy = 1.0f; camUpz = 0.0f;//Reposicionando o vetor UP da câmera
-        camPosx = positionCamMatrix[0][0]; 
-        camPosy = positionCamMatrix[0][1];
-        camPosz = positionCamMatrix[0][2];
-    }else if(actualPosition == 1){
-        camPosx = positionCamMatrix[1][0]; 
-        camPosy = positionCamMatrix[1][1];
-        camPosz = positionCamMatrix[1][2];
-    }else if(actualPosition == 2){
-        camPosx = positionCamMatrix[2][0]; 
-        camPosy = positionCamMatrix[2][1];
-        camPosz = positionCamMatrix[2][2];
-    }else if(actualPosition == 3){
-        camPosx = positionCamMatrix[3][0]; 
-        camPosy = positionCamMatrix[3][1];
-        camPosz = positionCamMatrix[3][2];
-    }else if(actualPosition == 4){
-        camPosx = positionCamMatrix[4][0]; 
-        camPosy = positionCamMatrix[4][1];
-        camPosz = positionCamMatrix[4][2];
-    }
-}
-
-
 void Screen::loadInitialState(){
     XmlReader myReader("data/xmlfiles/actual_state.xml","actual_state");
     myReader.loadFile();
@@ -366,6 +339,7 @@ void Screen::loadInitialState(){
     }
 }
 
+/* Implementar posteriormente
 void Screen::pushMovement(){
 
 }
@@ -373,7 +347,7 @@ void Screen::pushMovement(){
 void Screen::popMovement(){
 
 }
-
+*/
 void Screen::shuffleCube(){
     srand(time(NULL));
     for(int i = 0; i < 200; i++){
